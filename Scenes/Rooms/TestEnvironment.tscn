@@ -1,8 +1,8 @@
 [gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Scenes/Player/Player.tscn" type="PackedScene" id=1]
-[ext_resource path="res://Resources/BlueColorPack.tres" type="Resource" id=2]
-[ext_resource path="res://Resources/GreenColorPack.tres" type="Resource" id=3]
+[ext_resource path="res://Resources/ColorPacks/BlueColorPack.tres" type="Resource" id=2]
+[ext_resource path="res://Resources/ColorPacks/GreenColorPack.tres" type="Resource" id=3]
 [ext_resource path="res://Scenes/Triggers/SwitchColorPackTrigger.gd" type="Script" id=4]
 
 [sub_resource type="RectangleShape2D" id=1]
