@@ -1,4 +1,4 @@
-extends Control
+extends VBoxContainer
 class_name Slide
 
 signal visible_elements_finished_intro
