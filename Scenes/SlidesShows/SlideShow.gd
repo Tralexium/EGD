@@ -39,7 +39,7 @@ func _process(delta: float) -> void:
 func _check_if_slides_are_valid() -> void:
 	var _slide_num := 0
 	for _slide in slides:
-		assert(_slide is Slide, "Slide element num " + str(_slide_num) + " is invalid!")
+		assert(_slide is Slide, "Slide num " + str(_slide_num) + " is invalid!")
 		_slide_num += 1
 
 

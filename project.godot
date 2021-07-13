@@ -14,7 +14,7 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://Classes/ColorPack.gd"
 }, {
-"base": "Control",
+"base": "VBoxContainer",
 "class": "Slide",
 "language": "GDScript",
 "path": "res://Scenes/SlidesShows/Slide.gd"

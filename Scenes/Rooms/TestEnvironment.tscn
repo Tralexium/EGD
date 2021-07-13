@@ -48,6 +48,5 @@ color_pack = ExtResource( 3 )
 self_modulate = Color( 0.929412, 0.286275, 0.905882, 1 )
 position = Vector2( 0, 96 )
 shape = SubResource( 1 )
-
 [connection signal="body_entered" from="SwitchColorPackTrigger" to="SwitchColorPackTrigger" method="_on_Area2D_body_entered"]
 [connection signal="body_entered" from="SwitchColorPackTrigger2" to="SwitchColorPackTrigger2" method="_on_Area2D_body_entered"]
