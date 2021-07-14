@@ -15,8 +15,9 @@ func _ready() -> void:
 
 
 func _process(delta: float) -> void:
-	n_Subtitle.text = subtitle_text  # So that we can see the text in the editor
-	pass
+	# So that we can see the text in the editor
+	if n_Subtitle.text != subtitle_text:
+		n_Subtitle.text = subtitle_text
 
 
 func activate_element() -> void:

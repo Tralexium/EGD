@@ -9,6 +9,11 @@
 config_version=4
 
 _global_script_classes=[ {
+"base": "HBoxContainer",
+"class": "BulletPoint",
+"language": "GDScript",
+"path": "res://Scenes/SlidesShows/Slide Elements/SlideBulletpoint.gd"
+}, {
 "base": "Resource",
 "class": "ColorPack",
 "language": "GDScript",
@@ -25,6 +30,7 @@ _global_script_classes=[ {
 "path": "res://Classes/SlideElement.gd"
 } ]
 _global_script_class_icons={
+"BulletPoint": "",
 "ColorPack": "",
 "Slide": "",
 "SlideElement": ""

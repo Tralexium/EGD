@@ -1,0 +1,24 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Scenes/SlidesShows/Slide Elements/SlideBulletpointElement.gd" type="Script" id=1]
+[ext_resource path="res://Scenes/SlidesShows/Slide Elements/SlideBulletpoint.tscn" type="PackedScene" id=2]
+
+[node name="SlideBulletpointElement" type="Control"]
+margin_right = 40.0
+margin_bottom = 14.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+bulletpoints = [ ExtResource( 2 ) ]
+
+[node name="Bulletpoints" type="VBoxContainer" parent="."]
+margin_left = 128.0
+margin_right = 1920.0
+margin_bottom = 1088.0
+custom_constants/separation = 24
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Tween" type="Tween" parent="."]

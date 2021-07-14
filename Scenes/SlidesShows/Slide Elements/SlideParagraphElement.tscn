@@ -1,0 +1,23 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Scenes/SlidesShows/Slide Elements/SlideParagraphElement.gd" type="Script" id=1]
+[ext_resource path="res://Resources/DynamicFonts/GeneralTextFont.tres" type="DynamicFont" id=2]
+
+[node name="SlideParagraphElement" type="Control"]
+margin_right = 40.0
+margin_bottom = 14.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+paragraph_text = "Set your paragraph here!"
+
+[node name="Paragraph" type="Label" parent="."]
+margin_left = 128.0
+margin_right = 1440.0
+margin_bottom = 512.0
+custom_fonts/font = ExtResource( 2 )
+text = "Set your paragraph here!"
+autowrap = true
+
+[node name="Tween" type="Tween" parent="."]

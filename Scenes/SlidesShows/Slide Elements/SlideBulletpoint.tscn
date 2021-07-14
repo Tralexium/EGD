@@ -1,0 +1,30 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Resources/DynamicFonts/GeneralTextFont.tres" type="DynamicFont" id=1]
+[ext_resource path="res://Scenes/SlidesShows/Slide Elements/SlideBulletpoint.gd" type="Script" id=2]
+[ext_resource path="res://Assets/Slide Show Elements/Bulletpoint.png" type="Texture" id=3]
+
+[node name="SlideBulletpoint" type="HBoxContainer"]
+margin_right = 40.0
+margin_bottom = 40.0
+custom_constants/separation = 25
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+bulletpoint_text = "Put your bulletpoint here!"
+
+[node name="Bulletpoint" type="TextureRect" parent="."]
+margin_right = 38.0
+margin_bottom = 40.0
+texture = ExtResource( 3 )
+
+[node name="Label" type="Label" parent="."]
+margin_left = 63.0
+margin_right = 446.0
+margin_bottom = 40.0
+custom_fonts/font = ExtResource( 1 )
+text = "Put your bulletpoint here!"
+__meta__ = {
+"_edit_use_anchors_": false
+}
