@@ -1,0 +1,22 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Assets/Videos/Boats-in-a-blue-lagoon.ogv" type="VideoStream" id=1]
+
+[node name="SlideVideoElement" type="Control"]
+margin_right = 40.0
+margin_bottom = 14.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Video" type="VideoPlayer" parent="."]
+margin_left = 448.0
+margin_right = 1465.0
+margin_bottom = 576.0
+stream = ExtResource( 1 )
+autoplay = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Tween" type="Tween" parent="."]
