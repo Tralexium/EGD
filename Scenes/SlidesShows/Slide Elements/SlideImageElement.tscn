@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://Scenes/SlidesShows/Slide Elements/SlideImageElement.gd" type="Script" id=1]
 [ext_resource path="res://Assets/Slide Show Elements/Empty Image Element.png" type="Texture" id=2]
+[ext_resource path="res://Resources/DynamicFonts/ElementCaptionFont.tres" type="DynamicFont" id=3]
 
 [node name="SlideImageElement" type="Control"]
 margin_right = 40.0
@@ -10,15 +11,63 @@ script = ExtResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
-image = ExtResource( 2 )
 
-[node name="Image" type="TextureRect" parent="."]
+[node name="CenterContainer" type="CenterContainer" parent="."]
 margin_right = 1920.0
 margin_bottom = 324.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Image" type="TextureRect" parent="CenterContainer"]
+margin_left = 573.0
+margin_right = 1347.0
+margin_bottom = 324.0
 texture = ExtResource( 2 )
-stretch_mode = 4
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ImageBottomBar" type="ColorRect" parent="CenterContainer/Image"]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -384.0
+margin_top = -8.0
+margin_right = 384.0
+rect_pivot_offset = Vector2( 384, 4 )
+color = Color( 0.298039, 0.694118, 0.980392, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CaptionBG" type="ColorRect" parent="CenterContainer/Image"]
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -134.0
+margin_top = -36.0
+grow_horizontal = 0
+color = Color( 0.298039, 0.694118, 0.980392, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Caption" type="Label" parent="CenterContainer/Image/CaptionBG"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 24.0
+margin_right = -24.0
+grow_horizontal = 0
+custom_fonts/font = ExtResource( 3 )
+text = "caption"
+align = 1
+valign = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Tween" type="Tween" parent="."]
+[connection signal="minimum_size_changed" from="CenterContainer/Image/CaptionBG/Caption" to="." method="_on_Caption_minimum_size_changed"]
