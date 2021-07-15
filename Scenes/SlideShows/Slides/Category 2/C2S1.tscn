@@ -1,9 +1,31 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://Scenes/SlideShows/Slide.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Scenes/SlideShows/Slide Elements/SlideSubtitleElement.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Scenes/SlideShows/Slide Elements/SlideParagraphElement.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Scenes/SlideShows/Slide Elements/SlideBulletpointElement.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Classes/SlideBulletpoint.gd" type="Script" id=5]
+
+[sub_resource type="Curve" id=6]
+resource_local_to_scene = true
+script = ExtResource( 5 )
+bulletpoint_text = "Different gameplay intensities"
+
+[sub_resource type="Curve" id=2]
+script = ExtResource( 5 )
+bulletpoint_text = "Story/Cuscenes"
+
+[sub_resource type="Curve" id=3]
+script = ExtResource( 5 )
+bulletpoint_text = "Puzzles"
+
+[sub_resource type="Curve" id=4]
+script = ExtResource( 5 )
+bulletpoint_text = "Minigames"
+
+[sub_resource type="Curve" id=5]
+script = ExtResource( 5 )
+bulletpoint_text = "Item hunting"
 
 [node name="C2S1" instance=ExtResource( 1 )]
 
@@ -16,19 +38,28 @@ subtitle_text = "Pacing is crucial!"
 [node name="SlideParagraphElement" parent="." index="1" instance=ExtResource( 3 )]
 margin_top = 116.0
 margin_right = 1920.0
-margin_bottom = 199.0
-rect_min_size = Vector2( 0, 83 )
+margin_bottom = 156.0
+rect_min_size = Vector2( 0, 40 )
 paragraph_text = "Game pace is usually refering to mixing different 
-gameplay elements to keep the game fresh."
+gameplay elements, which are often refered as 'pillars', to keep the game fresh."
 
 [node name="SlideParagraphElement2" parent="." index="2" instance=ExtResource( 3 )]
-margin_top = 263.0
+margin_top = 220.0
 margin_right = 1920.0
-margin_bottom = 303.0
+margin_bottom = 260.0
 rect_min_size = Vector2( 0, 40 )
-paragraph_text = "Here's some examples that can make the pacing more fun:"
+paragraph_text = "Some of these pillars are:"
 
 [node name="SlideBulletpointElement" parent="." index="3" instance=ExtResource( 4 )]
-margin_top = 367.0
+margin_top = 324.0
 margin_right = 1920.0
-margin_bottom = 367.0
+margin_bottom = 644.0
+rect_min_size = Vector2( 0, 320 )
+bulletpoint_texts = [ SubResource( 6 ), SubResource( 2 ), SubResource( 3 ), SubResource( 4 ), SubResource( 5 ) ]
+
+[node name="SlideParagraphElement3" parent="." index="4" instance=ExtResource( 3 )]
+margin_top = 708.0
+margin_right = 1920.0
+margin_bottom = 748.0
+rect_min_size = Vector2( 0, 40 )
+paragraph_text = "The pacing should change frequently. For example, if the player is physically exausted then introduce a cutscene as a short break. Each change should compliment the previous pillars!"

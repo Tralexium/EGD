@@ -1,6 +1,6 @@
 tool
 extends HBoxContainer
-class_name BulletPoint
+class_name Bulletpoint
 
 export var bulletpoint_text := ""
 

@@ -10,9 +10,14 @@ config_version=4
 
 _global_script_classes=[ {
 "base": "HBoxContainer",
-"class": "BulletPoint",
+"class": "Bulletpoint",
 "language": "GDScript",
 "path": "res://Scenes/SlideShows/Slide Elements/Slide Element Nested Scenes/SlideBulletpoint.gd"
+}, {
+"base": "Curve",
+"class": "BulletpointText",
+"language": "GDScript",
+"path": "res://Classes/SlideBulletpoint.gd"
 }, {
 "base": "Resource",
 "class": "ColorPack",
@@ -30,7 +35,8 @@ _global_script_classes=[ {
 "path": "res://Classes/SlideElement.gd"
 } ]
 _global_script_class_icons={
-"BulletPoint": "",
+"Bulletpoint": "",
+"BulletpointText": "",
 "ColorPack": "",
 "Slide": "",
 "SlideElement": ""

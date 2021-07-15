@@ -6,7 +6,7 @@
 [node name="SlideParagraphElement" type="Control"]
 margin_right = 64.0
 margin_bottom = 32.0
-rect_min_size = Vector2( 0, 169 )
+rect_min_size = Vector2( 0, 40 )
 script = ExtResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
