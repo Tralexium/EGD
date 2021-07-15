@@ -12,7 +12,7 @@ _global_script_classes=[ {
 "base": "HBoxContainer",
 "class": "BulletPoint",
 "language": "GDScript",
-"path": "res://Scenes/SlidesShows/Slide Elements/SlideBulletpoint.gd"
+"path": "res://Scenes/SlideShows/Slide Elements/Slide Element Nested Scenes/SlideBulletpoint.gd"
 }, {
 "base": "Resource",
 "class": "ColorPack",
@@ -22,7 +22,7 @@ _global_script_classes=[ {
 "base": "VBoxContainer",
 "class": "Slide",
 "language": "GDScript",
-"path": "res://Scenes/SlidesShows/Slide.gd"
+"path": "res://Scenes/SlideShows/Slide.gd"
 }, {
 "base": "Control",
 "class": "SlideElement",

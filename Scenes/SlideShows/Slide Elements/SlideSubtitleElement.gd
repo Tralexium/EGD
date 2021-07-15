@@ -3,7 +3,7 @@ extends SlideElement
 
 export var subtitle_text := ""
 
-var fade_in_dur := 1.0
+var fade_in_dur := 0.7
 var move_offset := 96
 onready var n_Subtitle: Label = $Subtitle
 onready var n_Tween: Tween = $Tween
@@ -18,6 +18,7 @@ func _process(delta: float) -> void:
 	# So that we can see the text in the editor
 	if n_Subtitle.text != subtitle_text:
 		n_Subtitle.text = subtitle_text
+		self.rect_min_size.y = n_Subtitle.rect_size.y
 
 
 func activate_element() -> void:

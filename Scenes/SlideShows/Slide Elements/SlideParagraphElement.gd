@@ -1,9 +1,9 @@
 tool
 extends SlideElement
 
-export var paragraph_text := ""
+export(String, MULTILINE) var paragraph_text := ""
 
-var fade_in_dur := 1.0
+var fade_in_dur := 0.7
 var move_offset := 96
 onready var n_Paragraph: Label = $Paragraph
 onready var n_Tween: Tween = $Tween
@@ -18,6 +18,7 @@ func _process(delta: float) -> void:
 	# So that we can see the text in the editor
 	if n_Paragraph.text != paragraph_text:
 		n_Paragraph.text = paragraph_text
+		self.rect_min_size.y = n_Paragraph.rect_size.y
 
 
 func activate_element() -> void:

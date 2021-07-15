@@ -1,11 +1,11 @@
 [gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Resources/DynamicFonts/SlideshowTitleFont.tres" type="DynamicFont" id=1]
-[ext_resource path="res://Scenes/SlidesShows/SlideShow.gd" type="Script" id=2]
+[ext_resource path="res://Scenes/SlideShows/SlideShow.gd" type="Script" id=2]
 [ext_resource path="res://Assets/Slide Show Elements/Next Slide Element Arrow.png" type="Texture" id=3]
 [ext_resource path="res://Assets/Slide Show Elements/Titlebar Fade.png" type="Texture" id=4]
 [ext_resource path="res://Assets/Slide Show Elements/Slideshow BG Texture.png" type="Texture" id=5]
-[ext_resource path="res://Scenes/SlidesShows/Slides/Category 1/C1S1.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Scenes/SlideShows/Slides/Category 1/C1S1.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Assets/Slide Show Elements/Next Slide Arrow.png" type="Texture" id=7]
 
 [node name="SlideShow" type="Control"]

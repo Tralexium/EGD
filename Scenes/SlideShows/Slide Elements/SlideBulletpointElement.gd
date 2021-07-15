@@ -3,7 +3,7 @@ extends SlideElement
 
 export(Array, PackedScene) var bulletpoints : Array setget set_bulletpoints
 
-var fade_in_dur := 1.0
+var fade_in_dur := 0.7
 var move_offset := 96
 var instanced_bulletpoints : Array
 onready var n_Bulletpoints: VBoxContainer = $Bulletpoints
@@ -24,6 +24,7 @@ func set_bulletpoints(new_value: Array) -> void:
 			old_bulletpoint.queue_free()
 	
 	bulletpoints = new_value
+	self.rect_min_size.y = n_Bulletpoints.get_constant("separation") * (bulletpoints.size() + 1)
 	if bulletpoints.size() > 0:
 		for new_bulletpoint in bulletpoints:
 			if new_bulletpoint:

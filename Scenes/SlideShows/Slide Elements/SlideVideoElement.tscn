@@ -1,0 +1,74 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Assets/Videos/Boats-in-a-blue-lagoon.ogv" type="VideoStream" id=1]
+[ext_resource path="res://Resources/DynamicFonts/ElementCaptionFont.tres" type="DynamicFont" id=2]
+[ext_resource path="res://Scenes/SlideShows/Slide Elements/SlideVideoElement.gd" type="Script" id=3]
+
+[node name="SlideVideoElement" type="Control"]
+margin_right = 40.0
+margin_bottom = 14.0
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+video = ExtResource( 1 )
+video_scale = 0.55
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+margin_right = 1920.0
+margin_bottom = 594.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Video" type="VideoPlayer" parent="CenterContainer"]
+margin_left = 432.0
+margin_right = 1488.0
+margin_bottom = 594.0
+rect_min_size = Vector2( 1056, 594 )
+stream = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VideoBottomBar" type="ColorRect" parent="CenterContainer/Video"]
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = -8.0
+rect_pivot_offset = Vector2( 528, 4 )
+color = Color( 0.298039, 0.694118, 0.980392, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CaptionBG" type="ColorRect" parent="CenterContainer/Video"]
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -134.0
+margin_top = -36.0
+grow_horizontal = 0
+color = Color( 0.298039, 0.694118, 0.980392, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Caption" type="Label" parent="CenterContainer/Video/CaptionBG"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 24.0
+margin_right = -24.0
+grow_horizontal = 0
+custom_fonts/font = ExtResource( 2 )
+text = "caption"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Tween" type="Tween" parent="."]
+
+[connection signal="finished" from="CenterContainer/Video" to="." method="_on_Video_finished"]
