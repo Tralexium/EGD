@@ -1,0 +1,36 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Scenes/SlideShows/Slide.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Scenes/SlideShows/Slide Elements/SlideParagraphElement.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Scenes/SlideShows/Slide Elements/SlideSubtitleElement.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Scenes/SlideShows/Slide Elements/SlideVideoElement.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Assets/Videos/Hollow-Knight-Keeping-it-Fresh.ogv" type="VideoStream" id=5]
+
+[node name="C6S1" instance=ExtResource( 1 )]
+
+[node name="SlideSubtitleElement" parent="." index="1" instance=ExtResource( 3 )]
+margin_right = 1920.0
+margin_bottom = 52.0
+rect_min_size = Vector2( 0, 52 )
+subtitle_text = "Adding More"
+
+[node name="SlideParagraphElement" parent="." index="2" instance=ExtResource( 2 )]
+margin_top = 100.0
+margin_right = 1920.0
+margin_bottom = 183.0
+rect_min_size = Vector2( 0, 83 )
+paragraph_text = "Having something new once in a while is benefitial for various reasons. Imagine doing the same task, with the same input each time. That would get tidious pretty fast."
+
+[node name="SlideParagraphElement2" parent="." index="3" instance=ExtResource( 2 )]
+margin_top = 231.0
+margin_right = 1920.0
+margin_bottom = 314.0
+rect_min_size = Vector2( 0, 83 )
+paragraph_text = "Whenever the player gets comfortable with the current set of tools, add a new one! This will further expand gameplay possibilities whilst keeping the player engaged."
+
+[node name="SlideVideoElement" parent="." index="4" instance=ExtResource( 4 )]
+margin_top = 362.0
+margin_right = 1920.0
+margin_bottom = 848.0
+video = ExtResource( 5 )
+caption = "Hollow Knight"

@@ -7,27 +7,27 @@
 [node name="SlideVideoElement" type="Control"]
 margin_right = 40.0
 margin_bottom = 14.0
-rect_min_size = Vector2( 0, 594 )
+rect_min_size = Vector2( 0, 486 )
 script = ExtResource( 3 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 video = ExtResource( 1 )
-video_scale = 0.55
+video_scale = 0.45
 caption = "Caption"
 
 [node name="CenterContainer" type="CenterContainer" parent="."]
 margin_right = 1920.0
-margin_bottom = 594.0
+margin_bottom = 486.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Video" type="VideoPlayer" parent="CenterContainer"]
-margin_left = 432.0
-margin_right = 1488.0
-margin_bottom = 594.0
-rect_min_size = Vector2( 1056, 594 )
+margin_left = 528.0
+margin_right = 1392.0
+margin_bottom = 486.0
+rect_min_size = Vector2( 864, 486 )
 stream = ExtResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -72,5 +72,6 @@ __meta__ = {
 }
 
 [node name="Tween" type="Tween" parent="."]
+
 [connection signal="finished" from="CenterContainer/Video" to="." method="_on_Video_finished"]
 [connection signal="minimum_size_changed" from="CenterContainer/Video/CaptionBG/Caption" to="." method="_on_Caption_minimum_size_changed"]

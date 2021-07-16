@@ -1,0 +1,57 @@
+[gd_scene load_steps=11 format=2]
+
+[ext_resource path="res://Scenes/SlideShows/Slide.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Scenes/SlideShows/Slide Elements/SlideSubtitleElement.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Scenes/SlideShows/Slide Elements/SlideBulletpointElement.gd" type="Script" id=3]
+[ext_resource path="res://Classes/SlideBulletpointText.gd" type="Script" id=4]
+[ext_resource path="res://Scenes/SlideShows/Slide Elements/SlideBulletpointElement.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Scenes/SlideShows/Slide Elements/SlideParagraphElement.tscn" type="PackedScene" id=6]
+
+[sub_resource type="Resource" id=1]
+script = ExtResource( 4 )
+bulletpoint_text = "Health/Mana"
+
+[sub_resource type="Resource" id=2]
+script = ExtResource( 4 )
+bulletpoint_text = "Minimap"
+
+[sub_resource type="Resource" id=3]
+script = ExtResource( 4 )
+bulletpoint_text = "Item bar"
+
+[sub_resource type="Resource" id=4]
+script = ExtResource( 4 )
+bulletpoint_text = "Enemy stats"
+
+[node name="C7S1" instance=ExtResource( 1 )]
+
+[node name="SlideSubtitleElement" parent="." index="1" instance=ExtResource( 2 )]
+margin_right = 1920.0
+margin_bottom = 52.0
+rect_min_size = Vector2( 0, 52 )
+subtitle_text = "Info At A Glance"
+
+[node name="SlideParagraphElement" parent="." index="2" instance=ExtResource( 6 )]
+margin_top = 100.0
+margin_right = 1920.0
+margin_bottom = 183.0
+rect_min_size = Vector2( 0, 83 )
+paragraph_text = "Games often feature a GUI (Graphical User Interface) to let the player know of their current situation. These can range from:"
+
+[node name="SlideBulletpointElement" type="Control" parent="." index="3" instance=ExtResource( 5 )]
+margin_top = 231.0
+margin_right = 1920.0
+margin_bottom = 487.0
+rect_min_size = Vector2( 0, 256 )
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+bulletpoint_texts = [ SubResource( 1 ), SubResource( 2 ), SubResource( 3 ), SubResource( 4 ) ]
+
+[node name="SlideParagraphElement2" parent="." index="4" instance=ExtResource( 6 )]
+margin_top = 535.0
+margin_right = 1920.0
+margin_bottom = 618.0
+rect_min_size = Vector2( 0, 83 )
+paragraph_text = "Consistant visual language is another important part. Making sure visuals don't clash with each other and make sense as to what they do or show."

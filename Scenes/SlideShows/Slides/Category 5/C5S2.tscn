@@ -1,0 +1,29 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Scenes/SlideShows/Slide.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Scenes/SlideShows/Slide Elements/SlideSubtitleElement.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Assets/Videos/Coinstacker-Freedom.ogv" type="VideoStream" id=3]
+[ext_resource path="res://Scenes/SlideShows/Slide Elements/SlideParagraphElement.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Scenes/SlideShows/Slide Elements/SlideVideoElement.tscn" type="PackedScene" id=5]
+
+[node name="C5S2" instance=ExtResource( 1 )]
+
+[node name="SlideSubtitleElement" parent="." index="1" instance=ExtResource( 2 )]
+margin_right = 1920.0
+margin_bottom = 52.0
+rect_min_size = Vector2( 0, 52 )
+subtitle_text = "Freedom Is Essential"
+
+[node name="SlideParagraphElement" parent="." index="2" instance=ExtResource( 4 )]
+margin_top = 100.0
+margin_right = 1920.0
+margin_bottom = 226.0
+rect_min_size = Vector2( 0, 126 )
+paragraph_text = "Allowing the player to arrive from spot A to B in many ways can often solve the issue of linearity. Always give plenty of room for the player to manuever around freely and avoid placing too many objects into view as to not overwhelm the player."
+
+[node name="SlideVideoElement" parent="." index="3" instance=ExtResource( 5 )]
+margin_top = 274.0
+margin_right = 1920.0
+margin_bottom = 760.0
+video = ExtResource( 3 )
+caption = "I wanna CoinStack 1000"

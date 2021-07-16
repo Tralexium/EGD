@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Slime-san Creator- Music by Meganeko.mp3-4d33269d661f588144e48184a77d950c.mp3str"
+
+[deps]
+
+source_file="res://Assets/Music/Slime-san Creator- Music by Meganeko.mp3"
+dest_files=[ "res://.import/Slime-san Creator- Music by Meganeko.mp3-4d33269d661f588144e48184a77d950c.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0
