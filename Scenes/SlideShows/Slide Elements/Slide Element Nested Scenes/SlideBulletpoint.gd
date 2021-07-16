@@ -2,17 +2,19 @@ tool
 extends HBoxContainer
 class_name Bulletpoint
 
-export var bulletpoint_text := ""
+export var bulletpoint_text := "" setget set_bulletpoint_text
 
+var is_ready := false
 onready var n_Label : Label = $Label
 
 
 func _ready() -> void:
-	if not Engine.editor_hint:
-		n_Label.self_modulate = Color.transparent
+	is_ready = true
 
 
-func _process(delta: float) -> void:
-	# So that we can see the text in the editor
-	if n_Label.text != bulletpoint_text:
-		n_Label.text = bulletpoint_text
+func set_bulletpoint_text(new_value: String) -> void:
+	bulletpoint_text = new_value
+	if not is_ready:
+		yield(self, "ready")
+	
+	n_Label.text = bulletpoint_text

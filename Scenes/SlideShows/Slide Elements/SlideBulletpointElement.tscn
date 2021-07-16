@@ -1,11 +1,11 @@
 [gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://Scenes/SlideShows/Slide Elements/SlideBulletpointElement.gd" type="Script" id=1]
-[ext_resource path="res://Classes/SlideBulletpoint.gd" type="Script" id=2]
+[ext_resource path="res://Classes/SlideBulletpointText.gd" type="Script" id=2]
 
-[sub_resource type="Curve" id=1]
+[sub_resource type="Resource" id=1]
 script = ExtResource( 2 )
-bulletpoint_text = "Bulletpoint placeholder"
+bulletpoint_text = "Put your text here!"
 
 [node name="SlideBulletpointElement" type="Control"]
 margin_right = 40.0

@@ -5,7 +5,7 @@
 [ext_resource path="res://Assets/Slide Show Elements/Next Slide Element Arrow.png" type="Texture" id=3]
 [ext_resource path="res://Assets/Slide Show Elements/Titlebar Fade.png" type="Texture" id=4]
 [ext_resource path="res://Assets/Slide Show Elements/Slideshow BG Texture.png" type="Texture" id=5]
-[ext_resource path="res://Scenes/SlideShows/Slides/Category 1/C1S1.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Scenes/SlideShows/Slides/Category 2/C2S2.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Assets/Slide Show Elements/Next Slide Arrow.png" type="Texture" id=7]
 [ext_resource path="res://Scenes/SlideShows/Slides/Category 2/C2S1.tscn" type="PackedScene" id=8]
 
@@ -16,7 +16,7 @@ script = ExtResource( 2 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
-slides = [ ExtResource( 6 ), ExtResource( 8 ) ]
+slides = [ ExtResource( 8 ), ExtResource( 6 ) ]
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 anchor_right = 1.0

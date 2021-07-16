@@ -1,0 +1,31 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Assets/Videos/Celeste-Pillars-Example-Video.ogv" type="VideoStream" id=1]
+[ext_resource path="res://Scenes/SlideShows/Slide.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Scenes/SlideShows/Slide Elements/SlideParagraphElement.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Scenes/SlideShows/Slide Elements/SlideVideoElement.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Scenes/SlideShows/Slide Elements/SlideSubtitleElement.tscn" type="PackedScene" id=5]
+
+[node name="C2S2" instance=ExtResource( 2 )]
+
+[node name="SlideSubtitleElement" parent="." index="1" instance=ExtResource( 5 )]
+margin_right = 1920.0
+margin_bottom = 52.0
+rect_min_size = Vector2( 0, 52 )
+subtitle_text = "Mix and match!"
+
+[node name="SlideParagraphElement" parent="." index="2" instance=ExtResource( 3 )]
+margin_top = 100.0
+margin_right = 1920.0
+margin_bottom = 226.0
+rect_min_size = Vector2( 0, 126 )
+paragraph_text = "The pacing should change frequently. For example, if the player is physically exausted then introduce a cutscene as a short break. Each new pillar should compliment the previous ones!"
+
+[node name="SlideVideoElement" parent="." index="3" instance=ExtResource( 4 )]
+margin_top = 274.0
+margin_right = 1920.0
+margin_bottom = 760.0
+rect_min_size = Vector2( 0, 486 )
+video = ExtResource( 1 )
+video_scale = 0.45
+caption = "Celeste"

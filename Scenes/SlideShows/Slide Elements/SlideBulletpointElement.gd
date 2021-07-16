@@ -1,7 +1,7 @@
 tool
 extends SlideElement
 
-export(Array, Curve) var bulletpoint_texts setget set_bulletpoint_texts
+export(Array, Resource) var bulletpoint_texts setget set_bulletpoint_texts
 
 var fade_in_dur := 0.7
 var move_offset := 96

@@ -14,10 +14,10 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://Scenes/SlideShows/Slide Elements/Slide Element Nested Scenes/SlideBulletpoint.gd"
 }, {
-"base": "Curve",
+"base": "Resource",
 "class": "BulletpointText",
 "language": "GDScript",
-"path": "res://Classes/SlideBulletpoint.gd"
+"path": "res://Classes/SlideBulletpointText.gd"
 }, {
 "base": "Resource",
 "class": "ColorPack",
