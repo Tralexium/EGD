@@ -1,0 +1,60 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Assets/Main Level/Slideshow Panel.png" type="Texture" id=1]
+[ext_resource path="res://Scenes/SlideshowWarp.gd" type="Script" id=2]
+[ext_resource path="res://Resources/DynamicFonts/SlideshowWarpFont.tres" type="DynamicFont" id=3]
+
+[sub_resource type="CircleShape2D" id=1]
+radius = 896.0
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 192, 86 )
+
+[node name="SlideshowWarp" type="Sprite"]
+self_modulate = Color( 0.792157, 0.560784, 0.231373, 1 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 1 )
+script = ExtResource( 2 )
+
+[node name="TitleVisibilityArea" type="Area2D" parent="."]
+monitorable = false
+collision_layer = 0
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TitleVisibilityArea"]
+self_modulate = Color( 0.364706, 0.901961, 0.827451, 0.321569 )
+shape = SubResource( 1 )
+
+[node name="WarpArea" type="Area2D" parent="."]
+monitorable = false
+collision_layer = 0
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="WarpArea"]
+self_modulate = Color( 0.901961, 0.364706, 0.866667, 0.752941 )
+shape = SubResource( 2 )
+
+[node name="Name" type="Label" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -306.0
+margin_top = -167.0
+margin_right = -169.0
+margin_bottom = -108.0
+grow_horizontal = 2
+grow_vertical = 2
+custom_fonts/font = ExtResource( 3 )
+text = "Slideshow Name"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Tween" type="Tween" parent="."]
+
+[connection signal="body_entered" from="TitleVisibilityArea" to="." method="_on_TitleVisibilityArea_body_entered"]
+[connection signal="body_exited" from="TitleVisibilityArea" to="." method="_on_TitleVisibilityArea_body_exited"]
+[connection signal="body_entered" from="WarpArea" to="." method="_on_WarpArea_body_entered"]

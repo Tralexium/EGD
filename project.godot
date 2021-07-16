@@ -45,7 +45,7 @@ _global_script_class_icons={
 [application]
 
 config/name="EGD"
-run/main_scene="res://Scenes/Rooms/TestEnvironment.tscn"
+run/main_scene="res://Scenes/Main.tscn"
 config/icon="res://icon.png"
 
 [autoload]

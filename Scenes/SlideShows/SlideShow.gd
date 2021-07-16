@@ -3,6 +3,7 @@ extends Control
 signal finished_slideshow_intro
 
 export(Array, PackedScene) var slides : Array
+export(String) var slideshow_title := "Title"
 
 var intro_fade_dur := 0.5
 var title_fade_in_dur := 1.0
@@ -30,6 +31,8 @@ onready var n_IntroFade : ColorRect = $IntroFade
 
 func _ready() -> void:
 	slide_count = slides.size()
+	n_Title.text = slideshow_title
+	get_tree().paused = true
 	_do_intro()
 
 
@@ -40,6 +43,7 @@ func _process(delta: float) -> void:
 	if Input.is_action_just_pressed("ui_accept"):
 		_proceed_slide()
 		_hide_arrows()
+
 
 
 func _do_intro() -> void:
@@ -82,8 +86,7 @@ func _finish_intro() -> void:
 
 func _add_next_slide_to_tree() -> void:
 	if current_slide_num == slide_count:
-		# End slideshow
-		_end_slideshow()
+		_do_outro()
 		return
 	else:
 		# Next slide
@@ -95,9 +98,13 @@ func _add_next_slide_to_tree() -> void:
 		current_slide_num += 1
 
 
-func _end_slideshow() -> void:
-	# TODO
-	pass
+func _do_outro() -> void:
+	n_Tween.interpolate_property(n_IntroFade, "rect_scale", Vector2(0, 1), Vector2(1, 1), intro_fade_dur, Tween.TRANS_SINE, Tween.EASE_IN)
+	n_Tween.start()
+	yield(n_Tween, "tween_all_completed")
+	
+	get_tree().paused = false
+	queue_free()
 
 
 func _proceed_slide() -> void:
