@@ -18,7 +18,7 @@ __meta__ = {
 [node name="MaxHeight" type="ReferenceRect" parent="Tween"]
 margin_right = 1920.0
 margin_bottom = 850.0
-rect_min_size = Vector2( 0, 850 )
+rect_min_size = Vector2( 1920, 900 )
 __meta__ = {
 "_edit_lock_": true
 }

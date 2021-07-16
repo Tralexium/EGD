@@ -1,0 +1,40 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Scenes/SlideShows/Slide.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Scenes/SlideShows/Slide Elements/SlideParagraphElement.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Scenes/SlideShows/Slide Elements/SlideSubtitleElement.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Assets/Images/Good Communication Examples.png" type="Texture" id=4]
+[ext_resource path="res://Scenes/SlideShows/Slide Elements/SlideImageElement.tscn" type="PackedScene" id=5]
+
+[node name="C4S1" instance=ExtResource( 1 )]
+
+[node name="MaxHeight" parent="Tween" index="0"]
+margin_bottom = 820.0
+
+[node name="SlideSubtitleElement" parent="." index="1" instance=ExtResource( 3 )]
+margin_right = 1920.0
+margin_bottom = 52.0
+rect_min_size = Vector2( 0, 52 )
+subtitle_text = "How To Play"
+
+[node name="SlideParagraphElement" parent="." index="2" instance=ExtResource( 2 )]
+margin_top = 100.0
+margin_right = 1920.0
+margin_bottom = 226.0
+rect_min_size = Vector2( 0, 126 )
+paragraph_text = "When designing a game, it's essential to sometimes step back and view at your game from a new player's perspective. Is the goal clear? Are the controls properly explained without being intrusive?"
+
+[node name="SlideParagraphElement2" parent="." index="3" instance=ExtResource( 2 )]
+margin_top = 274.0
+margin_right = 1920.0
+margin_bottom = 443.0
+rect_min_size = Vector2( 0, 169 )
+paragraph_text = "These are problems that many games used to face, but over the recent years, developers started taking notice and have interwoven a lot of the explaining into the gameplay itself. Making it feel as it is a part of the story, eliminating the need to frequently freeze progression."
+
+[node name="SlideImageElement" parent="." index="4" instance=ExtResource( 5 )]
+margin_top = 491.0
+margin_right = 1920.0
+margin_bottom = 851.0
+rect_min_size = Vector2( 0, 360 )
+image = ExtResource( 4 )
+caption = "Portal / Shovel Knight"

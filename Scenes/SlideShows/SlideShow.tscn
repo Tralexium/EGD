@@ -7,7 +7,7 @@
 [ext_resource path="res://Assets/Slide Show Elements/Slideshow BG Texture.png" type="Texture" id=5]
 [ext_resource path="res://Scenes/SlideShows/Slides/Category 2/C2S2.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Assets/Slide Show Elements/Next Slide Arrow.png" type="Texture" id=7]
-[ext_resource path="res://Scenes/SlideShows/Slides/Category 2/C2S1.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Scenes/SlideShows/Slides/Category 4/C4S1.tscn" type="PackedScene" id=8]
 
 [node name="SlideShow" type="Control"]
 anchor_right = 1.0
@@ -28,8 +28,8 @@ __meta__ = {
 
 [node name="TitleBarBGColor" type="ColorRect" parent="VBoxContainer"]
 margin_right = 1920.0
-margin_bottom = 192.0
-rect_min_size = Vector2( 0, 192 )
+margin_bottom = 128.0
+rect_min_size = Vector2( 0, 128 )
 color = Color( 0.141176, 0.47451, 0.94902, 1 )
 
 [node name="Title" type="Label" parent="VBoxContainer/TitleBarBGColor"]
@@ -59,7 +59,7 @@ __meta__ = {
 }
 
 [node name="ContentsBGColor" type="ColorRect" parent="VBoxContainer"]
-margin_top = 192.0
+margin_top = 128.0
 margin_right = 1920.0
 margin_bottom = 1080.0
 size_flags_vertical = 3
@@ -113,8 +113,7 @@ __meta__ = {
 [node name="SlideMargin" type="MarginContainer" parent="VBoxContainer/ContentsBGColor"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-custom_constants/margin_top = 64
-custom_constants/margin_left = 64
+custom_constants/margin_top = 48
 __meta__ = {
 "_edit_use_anchors_": false
 }

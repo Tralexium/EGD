@@ -18,7 +18,6 @@ subtitle_text = "Mix And Match"
 margin_top = 100.0
 margin_right = 1920.0
 margin_bottom = 226.0
-rect_min_size = Vector2( 0, 126 )
 paragraph_text = "The pacing should change frequently. For example, if the player is physically exausted then introduce a cutscene as a short break. Each new pillar should compliment the previous ones!"
 
 [node name="SlideVideoElement" parent="." index="3" instance=ExtResource( 4 )]
