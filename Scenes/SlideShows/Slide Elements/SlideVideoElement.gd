@@ -8,7 +8,7 @@ export var caption : String setget set_caption
 var fade_in_dur := 0.7
 var caption_grow_dur := 0.5
 var move_offset := 96
-var initial_caption_bg_left_margin := 100
+var initial_caption_bg_left_margin := -100
 var is_ready := false
 onready var n_CenterContainer: CenterContainer = $CenterContainer
 onready var n_Video: VideoPlayer = $CenterContainer/Video
@@ -56,7 +56,7 @@ func set_caption(new_value: String) -> void:
 		yield(self, "ready")
 	n_Caption.text = caption
 	if new_value == "":
-		n_CaptionBG.margin_left = initial_caption_bg_left_margin
+		n_CaptionBG.margin_left = 0
 
 
 func activate_element() -> void:

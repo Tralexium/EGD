@@ -7,12 +7,14 @@
 [node name="SlideVideoElement" type="Control"]
 margin_right = 40.0
 margin_bottom = 14.0
+rect_min_size = Vector2( 0, 594 )
 script = ExtResource( 3 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 video = ExtResource( 1 )
 video_scale = 0.55
+caption = "Caption"
 
 [node name="CenterContainer" type="CenterContainer" parent="."]
 margin_right = 1920.0
@@ -47,7 +49,7 @@ anchor_left = 1.0
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_left = -134.0
+margin_left = -138.0
 margin_top = -36.0
 grow_horizontal = 0
 color = Color( 0.298039, 0.694118, 0.980392, 1 )
@@ -62,7 +64,7 @@ margin_left = 24.0
 margin_right = -24.0
 grow_horizontal = 0
 custom_fonts/font = ExtResource( 2 )
-text = "caption"
+text = "Caption"
 align = 1
 valign = 1
 __meta__ = {
@@ -70,5 +72,5 @@ __meta__ = {
 }
 
 [node name="Tween" type="Tween" parent="."]
-
 [connection signal="finished" from="CenterContainer/Video" to="." method="_on_Video_finished"]
+[connection signal="minimum_size_changed" from="CenterContainer/Video/CaptionBG/Caption" to="." method="_on_Caption_minimum_size_changed"]

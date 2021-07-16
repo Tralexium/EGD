@@ -32,7 +32,7 @@ bulletpoint_text = "Item Hunting"
 margin_right = 1920.0
 margin_bottom = 52.0
 rect_min_size = Vector2( 0, 52 )
-subtitle_text = "Pacing is crucial!"
+subtitle_text = "Pacing Is Crucial"
 
 [node name="SlideParagraphElement" parent="." index="2" instance=ExtResource( 3 )]
 margin_top = 100.0
