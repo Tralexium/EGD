@@ -24,6 +24,7 @@ export var dash_cooldown := 0.25
 export var coyote_time := 0.1
 
 var UP_DIR := Vector2.UP
+var frozen := false
 
 var velocity := Vector2.ZERO
 var hor_direction := 1
@@ -87,7 +88,7 @@ func _movement() -> void:
 	var _delta := get_physics_process_delta_time()
 	var _hor_movement := int(Input.is_action_pressed("ui_right")) - int(Input.is_action_pressed("ui_left"))
 	
-	if _hor_movement != 0:
+	if _hor_movement != 0 and not frozen:
 		hor_direction = _hor_movement
 		if abs(velocity.x) < walk_speed:
 			velocity.x += hor_direction * acceleration * _delta
@@ -101,7 +102,7 @@ func _movement() -> void:
 		velocity.x = lerp(velocity.x, 0, deceleration)
 		_play_animation(AnimationKind.IDLE)
 	
-	if Input.is_action_just_pressed("jump") and n_DashDuration.is_stopped():
+	if Input.is_action_just_pressed("jump") and n_DashDuration.is_stopped() and not frozen:
 		if on_ground:
 			velocity.y = -jump_force
 			_play_animation(AnimationKind.JUMP)
@@ -120,7 +121,7 @@ func _movement() -> void:
 			else:
 				_play_animation(AnimationKind.SPIN_LEFT)
 	
-	if Input.is_action_just_pressed("dash") and !dashed and n_DashCooldown.is_stopped() and !is_on_wall():
+	if Input.is_action_just_pressed("dash") and !dashed and n_DashCooldown.is_stopped() and !is_on_wall() and not frozen:
 		dashed = true
 		_play_animation(AnimationKind.DASH)
 		velocity.x = hor_direction * dash_speed
@@ -128,7 +129,7 @@ func _movement() -> void:
 		n_DashCooldown.start(dash_cooldown)
 		n_DashDuration.start(dash_duration)
 	
-	if Input.is_action_just_released("jump") and velocity.y < 0:
+	if Input.is_action_just_released("jump") and velocity.y < 0 and not frozen:
 		velocity.y *= 0.5
 
 

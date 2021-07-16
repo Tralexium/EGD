@@ -1,6 +1,7 @@
 extends Control
 
 signal finished_slideshow_intro
+signal slideshow_ended
 
 export(Array, PackedScene) var slides : Array
 export(String) var slideshow_title := "Title"
@@ -104,6 +105,8 @@ func _do_outro() -> void:
 	yield(n_Tween, "tween_all_completed")
 	
 	get_tree().paused = false
+	yield(get_tree().create_timer(0.05), "timeout")
+	emit_signal("slideshow_ended")
 	queue_free()
 
 
