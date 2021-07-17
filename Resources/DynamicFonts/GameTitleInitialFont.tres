@@ -3,7 +3,7 @@
 [ext_resource path="res://Assets/Fonts/VarelaRound-Regular.ttf" type="DynamicFontData" id=1]
 
 [resource]
-size = 64
+size = 112
 outline_size = 3
 use_filter = true
 extra_spacing_char = 4
