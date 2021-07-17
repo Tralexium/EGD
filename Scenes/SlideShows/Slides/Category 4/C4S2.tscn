@@ -17,14 +17,14 @@ margin_top = 100.0
 margin_right = 1920.0
 margin_bottom = 312.0
 rect_min_size = Vector2( 0, 212 )
-paragraph_text = "Teaching the player how to play game can be accomplished in many ways. Use short labels in unintrusive spots to teach a new mechanic. Gently flash an object in the environment to lure to player to something good, or flash something regurarly to indicate a hazard. Replicating control schemes from other popular games that belong in the same genre can also help."
+paragraph_text = "Teaching the player how to play a game could be done in many ways. Use short labels in unobtrusive spots to teach a new mechanic. Gently flash an object in the environment to lure to player to something good, or flash something regularly to indicate a hazard. Replicating control schemes from other popular games that belong in the same genre can also help."
 
 [node name="SlideParagraphElement2" parent="." index="3" instance=ExtResource( 2 )]
 margin_top = 360.0
 margin_right = 1920.0
 margin_bottom = 529.0
 rect_min_size = Vector2( 0, 169 )
-paragraph_text = "Those are only some of many possibilities, but even so these seemingly small design decisions can lead to a more intuitive experience. Study other games that are known amongst others and try to understand how they teach the player. Sometimes, certain gameplay elements can be even tought with just gameplay alone."
+paragraph_text = "Those are only some of many possibilities, but even so these seemingly small design decisions can lead to a more intuitive experience. Study other games that are known among others and try to understand how they teach the player. Sometimes, certain gameplay elements could be tought with just gameplay alone."
 
 [node name="SlideParagraphElement3" parent="." index="4" instance=ExtResource( 2 )]
 margin_top = 577.0

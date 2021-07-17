@@ -39,7 +39,7 @@ margin_top = 100.0
 margin_right = 1920.0
 margin_bottom = 183.0
 rect_min_size = Vector2( 0, 83 )
-paragraph_text = "Game pace is usually refering to mixing different 
+paragraph_text = "Game pace is usually referring to mixing different 
 gameplay elements, which are often refered as 'pillars', to keep the game fresh."
 
 [node name="SlideParagraphElement2" parent="." index="3" instance=ExtResource( 3 )]

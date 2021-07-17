@@ -64,7 +64,7 @@ func activate_element() -> void:
 		return
 		
 	is_active = true
-	n_Tween.interpolate_property(n_Video, "self_modulate", Color.transparent, ColorManager.light_color, fade_in_dur, Tween.TRANS_SINE, Tween.EASE_OUT)
+	n_Tween.interpolate_property(n_Video, "self_modulate", Color.transparent, Color.white, fade_in_dur, Tween.TRANS_SINE, Tween.EASE_OUT)
 	n_Tween.interpolate_property(n_Video, "rect_position", n_Video.rect_position + Vector2(0, move_offset), n_Video.rect_position, fade_in_dur, Tween.TRANS_SINE, Tween.EASE_OUT)
 	n_Tween.start()
 	yield(n_Tween, "tween_all_completed")

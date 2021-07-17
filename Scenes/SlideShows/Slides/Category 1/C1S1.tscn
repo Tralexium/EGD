@@ -13,12 +13,12 @@ rect_min_size = Vector2( 0, 52 )
 subtitle_text = "Who am I?"
 
 [node name="SlideParagraphElement" parent="." index="2" instance=ExtResource( 3 )]
-margin_top = 116.0
+margin_top = 100.0
 margin_right = 1920.0
-margin_bottom = 328.0
+margin_bottom = 312.0
 rect_min_size = Vector2( 0, 212 )
 paragraph_text = "I'm known as Tralexium in the internet world, but you can also call me Alex!
 
-I'm a hobbyist developerwho has been in the game dev field for over 4 years.
+I'm a hobbyist developer who has been in the game dev field for over 4 years.
 I've made/participated in various projects such as Not Another Needle Contest 2,
 I Wanna Destroy the Needleverse, I Wanna stop the Simulation and the list goes on."

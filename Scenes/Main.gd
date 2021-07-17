@@ -3,6 +3,7 @@ extends Node
 export var game_start_delay := 1.5
 
 var music_is_faded := false
+var finished_intro := false
 var music_fade_time := 2.0
 
 onready var n_BG : ParallaxLayer = $ParallaxBackground/BG
@@ -35,6 +36,17 @@ func _ready() -> void:
 	_do_intro()
 
 
+func _process(delta: float) -> void:
+	if not finished_intro:
+		return
+	
+	n_BG.modulate = ColorManager.dark_color
+	n_BackHills.modulate = ColorManager.primary_color
+	n_Hills.modulate = ColorManager.primary_color
+	n_Floor.modulate = ColorManager.light_color
+	n_Decor.modulate = ColorManager.complimentary_color
+
+
 func _connect_signals() -> void:
 	if n_SlideshowWarps.get_child_count() == 0:
 		return
@@ -56,15 +68,16 @@ func _do_intro() -> void:
 	yield(n_Tween, "tween_all_completed")
 	
 	n_Tween.interpolate_property(n_Floor, "modulate", n_Floor.modulate, ColorManager.light_color, 0.5, Tween.TRANS_SINE, Tween.EASE_IN)
-	n_Tween.interpolate_property(n_BG, "modulate", Color(ColorManager.dark_color) * Color(1, 1, 1, 0), ColorManager.dark_color, 0.4, Tween.TRANS_SINE, Tween.EASE_IN, 0.7)
-	n_Tween.interpolate_property(n_BackHills, "modulate", Color(ColorManager.primary_color) * Color(1, 1, 1, 0), ColorManager.primary_color, 0.4, Tween.TRANS_SINE, Tween.EASE_IN, 0.9)
-	n_Tween.interpolate_property(n_Hills, "modulate", Color(ColorManager.primary_color) * Color(1, 1, 1, 0), ColorManager.primary_color, 0.4, Tween.TRANS_SINE, Tween.EASE_IN, 1.1)
-	n_Tween.interpolate_property(n_Decor, "modulate", Color(ColorManager.complimentary_color) * Color(1, 1, 1, 0), ColorManager.complimentary_color, 0.4, Tween.TRANS_SINE, Tween.EASE_IN, 1.3)
-	n_Tween.interpolate_property(n_SlideshowWarps, "modulate", n_SlideshowWarps.modulate, Color.white, 0.4, Tween.TRANS_SINE, Tween.EASE_IN, 1.4)
+	n_Tween.interpolate_property(n_BG, "modulate", Color(ColorManager.dark_color) * Color(1, 1, 1, 0), ColorManager.dark_color, 0.4, Tween.TRANS_SINE, Tween.EASE_IN, 1.0)
+	n_Tween.interpolate_property(n_Hills, "modulate", Color(ColorManager.primary_color) * Color(1, 1, 1, 0), ColorManager.primary_color, 0.4, Tween.TRANS_SINE, Tween.EASE_IN, 1.4)
+	n_Tween.interpolate_property(n_BackHills, "modulate", Color(ColorManager.primary_color) * Color(1, 1, 1, 0), ColorManager.primary_color, 0.4, Tween.TRANS_SINE, Tween.EASE_IN, 1.2)
+	n_Tween.interpolate_property(n_Decor, "modulate", Color(ColorManager.complimentary_color) * Color(1, 1, 1, 0), ColorManager.complimentary_color, 0.4, Tween.TRANS_SINE, Tween.EASE_IN, 1.6)
+	n_Tween.interpolate_property(n_SlideshowWarps, "modulate", n_SlideshowWarps.modulate, Color.white, 0.4, Tween.TRANS_SINE, Tween.EASE_IN, 1.8)
 	n_Tween.start()
 	yield(n_Tween, "tween_all_completed")
 	
 	n_Player.frozen = false
+	finished_intro = true
 
 
 func fade_in_music() -> void:

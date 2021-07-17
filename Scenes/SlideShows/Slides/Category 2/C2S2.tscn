@@ -18,13 +18,12 @@ subtitle_text = "Mix And Match"
 margin_top = 100.0
 margin_right = 1920.0
 margin_bottom = 226.0
-paragraph_text = "The pacing should change frequently. For example, if the player is physically exausted then introduce a cutscene as a short break. Each new pillar should compliment the previous ones!"
+rect_min_size = Vector2( 0, 126 )
+paragraph_text = "The pacing should change often. For example, if the player is physically exhausted then introduce a cut scene as a short break. Each new pillar should compliment the earlier ones!"
 
 [node name="SlideVideoElement" parent="." index="3" instance=ExtResource( 4 )]
 margin_top = 274.0
 margin_right = 1920.0
 margin_bottom = 760.0
-rect_min_size = Vector2( 0, 486 )
 video = ExtResource( 1 )
-video_scale = 0.45
 caption = "Celeste"

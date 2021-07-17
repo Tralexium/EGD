@@ -23,6 +23,11 @@ func _ready() -> void:
 		n_Name.self_modulate = Color.transparent
 
 
+func _process(delta: float) -> void:
+	if not Engine.editor_hint:
+		self_modulate = ColorManager.primary_color
+
+
 func set_slideshow_name(new_value: String) -> void:
 	slideshow_name = new_value
 	if not is_ready:

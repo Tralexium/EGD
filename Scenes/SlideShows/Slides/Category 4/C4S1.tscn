@@ -29,7 +29,7 @@ margin_top = 274.0
 margin_right = 1920.0
 margin_bottom = 443.0
 rect_min_size = Vector2( 0, 169 )
-paragraph_text = "These are problems that many games used to face, but over the recent years, developers started taking notice and have interwoven a lot of the explaining into the gameplay itself. Making it feel as it is a part of the story, eliminating the need to frequently freeze progression."
+paragraph_text = "These are problems that many games used to face, but over the recent years, developers started taking notice and have interwoven a lot of the explaining into the gameplay itself. Making it feel as it is a part of the story, eliminating the need to often freeze progression."
 
 [node name="SlideImageElement" parent="." index="4" instance=ExtResource( 5 )]
 margin_top = 491.0

@@ -24,14 +24,14 @@ paragraph_text = "Also known as UX in the gaming industry. User experience commo
 [node name="SlideParagraphElement2" parent="." index="3" instance=ExtResource( 3 )]
 margin_top = 231.0
 margin_right = 1920.0
-margin_bottom = 357.0
-rect_min_size = Vector2( 0, 126 )
-paragraph_text = "There's no definitive answer as to what makes a good UX. A lot of it comes down to the genre and platform. In our case, platformers should display essential info in unobtrusive spots. Everything else should be easily accesible via shortcuts or the pause menu."
+margin_bottom = 400.0
+rect_min_size = Vector2( 0, 169 )
+paragraph_text = "There's no definitive answer about what makes a good UX. A lot of it comes down to the genre and platform. In our case, platformers should display essential info in unobtrusive spots. Everything else could be easily accessible via shortcuts or the pause menu."
 
 [node name="SlideImageElement" parent="." index="4" instance=ExtResource( 5 )]
-margin_top = 405.0
+margin_top = 448.0
 margin_right = 1920.0
-margin_bottom = 784.0
-rect_min_size = Vector2( 0, 379 )
+margin_bottom = 881.0
+rect_min_size = Vector2( 0, 433 )
 image = ExtResource( 4 )
 caption = "Dead Cells"

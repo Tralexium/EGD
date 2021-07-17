@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Scenes/Player/Player.tscn" type="PackedScene" id=1]
-[ext_resource path="res://Resources/ColorPacks/BlueColorPack.tres" type="Resource" id=2]
+[ext_resource path="res://Scenes/Areas/ChangeColorPackArea.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Resources/ColorPacks/GreenColorPack.tres" type="Resource" id=3]
 [ext_resource path="res://Scenes/Triggers/SwitchColorPackTrigger.gd" type="Script" id=4]
 
@@ -23,18 +23,7 @@ polygon = PoolVector2Array( 0, 0, 480, 0, 480, -64, 352, -64, 352, -160, 224, -1
 [node name="Player" parent="." instance=ExtResource( 1 )]
 position = Vector2( 896, 608 )
 
-[node name="SwitchColorPackTrigger" type="Area2D" parent="."]
-position = Vector2( 1248, 352 )
-monitorable = false
-collision_layer = 0
-collision_mask = 2
-script = ExtResource( 4 )
-color_pack = ExtResource( 2 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="SwitchColorPackTrigger"]
-self_modulate = Color( 0.929412, 0.286275, 0.905882, 1 )
-position = Vector2( 0, 64 )
-shape = SubResource( 1 )
+[node name="ChangeColorPackArea" parent="." instance=ExtResource( 2 )]
 
 [node name="SwitchColorPackTrigger2" type="Area2D" parent="."]
 position = Vector2( 608, 416 )
@@ -48,5 +37,5 @@ color_pack = ExtResource( 3 )
 self_modulate = Color( 0.929412, 0.286275, 0.905882, 1 )
 position = Vector2( 0, 96 )
 shape = SubResource( 1 )
-[connection signal="body_entered" from="SwitchColorPackTrigger" to="SwitchColorPackTrigger" method="_on_Area2D_body_entered"]
+
 [connection signal="body_entered" from="SwitchColorPackTrigger2" to="SwitchColorPackTrigger2" method="_on_Area2D_body_entered"]

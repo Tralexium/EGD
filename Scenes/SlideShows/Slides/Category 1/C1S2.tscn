@@ -13,29 +13,29 @@ rect_min_size = Vector2( 0, 52 )
 subtitle_text = "What makes a game \"engaging\"?"
 
 [node name="SlideParagraphElement" parent="." index="1" instance=ExtResource( 3 )]
-margin_top = 116.0
+margin_top = 100.0
 margin_right = 1920.0
-margin_bottom = 199.0
+margin_bottom = 183.0
 rect_min_size = Vector2( 0, 83 )
-paragraph_text = "Making games without knowing any of the design principles is like making a pizza without a recipe. It might come out good but you will surelly offend some Italians."
+paragraph_text = "Making games without knowing any of the design principles is like making a pizza without a recipe. It might come out good but you will surely offend some Italians."
 
 [node name="SlideParagraphElement2" parent="." index="2" instance=ExtResource( 3 )]
-margin_top = 263.0
+margin_top = 231.0
 margin_right = 1920.0
-margin_bottom = 346.0
+margin_bottom = 314.0
 rect_min_size = Vector2( 0, 83 )
 paragraph_text = "Knowing the 'how' when it comes to making games is crucial. Without them games tend to feel dull, repetitive or in worst cases confusing."
 
 [node name="SlideParagraphElement3" parent="." index="3" instance=ExtResource( 3 )]
-margin_top = 410.0
+margin_top = 362.0
 margin_right = 1920.0
-margin_bottom = 536.0
-rect_min_size = Vector2( 0, 126 )
-paragraph_text = "Nothing in this presentetion is absolute, as some rules might not be as fitting for some genres. However, they have been proven to be an excellent guideline when designing the majority of games!"
+margin_bottom = 445.0
+rect_min_size = Vector2( 0, 83 )
+paragraph_text = "Nothing in this presentation is absolute, as some rules aren't as fitting for some genres. However, they have been proven effective when designing most games!"
 
 [node name="SlideParagraphElement4" parent="." index="4" instance=ExtResource( 3 )]
-margin_top = 600.0
+margin_top = 493.0
 margin_right = 1920.0
-margin_bottom = 683.0
+margin_bottom = 576.0
 rect_min_size = Vector2( 0, 83 )
 paragraph_text = "Although most of the material in this presentation is applicable for most game genres out there, we will be focusing more on 2D platformers."

@@ -4,7 +4,7 @@
 
 [resource]
 script = ExtResource( 1 )
-primary_color = Color( 0.396078, 0.866667, 0.368627, 1 )
+primary_color = Color( 0.345098, 0.72549, 0.32549, 1 )
 complimentary_color = Color( 0.933333, 0.368627, 0.435294, 1 )
 light_color = Color( 0.823529, 0.945098, 0.776471, 1 )
 dark_color = Color( 0.156863, 0.529412, 0.4, 1 )

@@ -19,7 +19,7 @@ margin_top = 100.0
 margin_right = 1920.0
 margin_bottom = 183.0
 rect_min_size = Vector2( 0, 83 )
-paragraph_text = "Having something new once in a while is benefitial for various reasons. Imagine doing the same task, with the same input each time. That would get tidious pretty fast."
+paragraph_text = "Having something new once in a while is beneficial for various reasons. Imagine doing the same task, with the same input each time. That would get tedious pretty fast."
 
 [node name="SlideParagraphElement2" parent="." index="3" instance=ExtResource( 2 )]
 margin_top = 231.0

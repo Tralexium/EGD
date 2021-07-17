@@ -1,0 +1,11 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://Classes/ColorPack.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+primary_color = Color( 0.792157, 0.670588, 0.309804, 1 )
+complimentary_color = Color( 0.368627, 0.933333, 0.615686, 1 )
+light_color = Color( 0.976471, 0.956863, 0.811765, 1 )
+dark_color = Color( 0.65098, 0.47451, 0.172549, 1 )
+darker_color = Color( 0.2, 0.137255, 0.101961, 1 )
