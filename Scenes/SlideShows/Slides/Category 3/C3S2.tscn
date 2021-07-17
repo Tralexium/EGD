@@ -19,13 +19,11 @@ margin_top = 100.0
 margin_right = 1920.0
 margin_bottom = 226.0
 rect_min_size = Vector2( 0, 126 )
-paragraph_text = "Controls should lean more on the responsive side with a bit of momentum. Tricks such as coyote frames and input buffering aid the gameplay, making it feel more fair whilst not being noticeable."
+paragraph_text = "Controls should lean more on the responsive side with a bit of momentum. Tricks such as coyote time and input buffering aid the gameplay, making it feel more fair whilst not being noticeable."
 
 [node name="SlideVideoElement" parent="." index="3" instance=ExtResource( 5 )]
 margin_top = 274.0
 margin_right = 1920.0
 margin_bottom = 760.0
-rect_min_size = Vector2( 0, 486 )
 video = ExtResource( 3 )
-video_scale = 0.45
 caption = "Ori and the Will of the Wisps"

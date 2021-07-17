@@ -19,7 +19,7 @@ margin_top = 100.0
 margin_right = 1920.0
 margin_bottom = 269.0
 rect_min_size = Vector2( 0, 169 )
-paragraph_text = "In today's world, people have varying interests and experience. So as a game developer it is crucial to ease in the player without making them feel overwhelmed. Imagine learning how to drive a car, you first start with the basics and then move onto the more nuanced things."
+paragraph_text = "In today's world, people have varying interests and experience. As a game developer it is crucial to ease in the player without making them feel overwhelmed. Imagine learning how to drive a car, you first start with the basics and then move onto the more nuanced things one by one."
 
 [node name="SlideVideoElement" parent="." index="3" instance=ExtResource( 4 )]
 margin_top = 317.0

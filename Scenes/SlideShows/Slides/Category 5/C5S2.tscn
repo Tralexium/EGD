@@ -19,7 +19,7 @@ margin_top = 100.0
 margin_right = 1920.0
 margin_bottom = 226.0
 rect_min_size = Vector2( 0, 126 )
-paragraph_text = "Allowing the player to arrive from spot A to B in many ways can often solve the issue of linearity. Always give plenty of room for the player to manuever around freely and avoid placing too many objects into view as to not overwhelm the player."
+paragraph_text = "Allowing the player to freely arrive from point A to B in different ways can often solve the issue of linearity. Always give plenty of room for the player to maneuver around freely and avoid placing too many objects into view as to not overwhelm the player."
 
 [node name="SlideVideoElement" parent="." index="3" instance=ExtResource( 5 )]
 margin_top = 274.0

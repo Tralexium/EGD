@@ -17,7 +17,7 @@ margin_top = 100.0
 margin_right = 1920.0
 margin_bottom = 226.0
 rect_min_size = Vector2( 0, 126 )
-paragraph_text = "Having an understanding of what makes controls feel good is not something you know without playing a lot of games. Most of us get can sense them, whether they're good or bad, but pin pointing the minute details is not as easy for most people."
+paragraph_text = "Having a solid understanding of what makes controls feel good is not something you know without playing a lot of games. Most of us can sense them, whether they're good or bad, but pinpointing the minute details is not as easy."
 
 [node name="SlideParagraphElement2" parent="." index="3" instance=ExtResource( 3 )]
 margin_top = 274.0

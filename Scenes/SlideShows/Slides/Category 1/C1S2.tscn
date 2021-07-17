@@ -24,7 +24,7 @@ margin_top = 231.0
 margin_right = 1920.0
 margin_bottom = 314.0
 rect_min_size = Vector2( 0, 83 )
-paragraph_text = "Knowing the 'how' when it comes to making games is crucial. Without them games tend to feel dull, repetitive or in worst cases confusing."
+paragraph_text = "Knowing the 'how' when it comes to making games is crucial. Going into game dev blindly can result in dull, repetitive or in worst cases confusing games."
 
 [node name="SlideParagraphElement3" parent="." index="3" instance=ExtResource( 3 )]
 margin_top = 362.0

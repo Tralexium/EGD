@@ -35,7 +35,7 @@ margin_top = 100.0
 margin_right = 1920.0
 margin_bottom = 183.0
 rect_min_size = Vector2( 0, 83 )
-paragraph_text = "Games often feature a GUI (Graphical User Interface) to let the player know of their current situation. These can range from:"
+paragraph_text = "Games often feature a GUI (Graphical User Interface) to let the player know of their current status and invornment. These can range from:"
 
 [node name="SlideBulletpointElement" parent="." index="3" instance=ExtResource( 5 )]
 margin_top = 231.0

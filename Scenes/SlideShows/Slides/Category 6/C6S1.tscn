@@ -19,14 +19,14 @@ margin_top = 100.0
 margin_right = 1920.0
 margin_bottom = 183.0
 rect_min_size = Vector2( 0, 83 )
-paragraph_text = "Having something new once in a while is beneficial for various reasons. Imagine doing the same task, with the same input each time. That would get tedious pretty fast."
+paragraph_text = "Having something new once in a while is beneficial for various reasons. Imagine doing the same task, with the same inputs each time. That would get tedious pretty fast."
 
 [node name="SlideParagraphElement2" parent="." index="3" instance=ExtResource( 2 )]
 margin_top = 231.0
 margin_right = 1920.0
 margin_bottom = 314.0
 rect_min_size = Vector2( 0, 83 )
-paragraph_text = "Whenever the player gets comfortable with the current set of tools, add a new one! This will further expand gameplay possibilities whilst keeping the player engaged."
+paragraph_text = "Whenever the player gets comfortable with the current set of tools, add a new one! This will further expand the gameplay possibilities whilst keeping the player engaged."
 
 [node name="SlideVideoElement" parent="." index="4" instance=ExtResource( 4 )]
 margin_top = 362.0
