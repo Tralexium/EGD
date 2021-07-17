@@ -129,6 +129,8 @@ __meta__ = {
 
 [node name="Tween" type="Tween" parent="."]
 
+[node name="TweenOutro" type="Tween" parent="."]
+
 [node name="ArrowTween" type="Tween" parent="."]
 repeat = true
 playback/repeat = true

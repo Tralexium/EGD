@@ -1,0 +1,8 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Scenes/SlideShows/Slide Shows/SH5.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Scenes/SlideShows/Slides/Category 6/C6S1.tscn" type="PackedScene" id=2]
+
+[node name="SH6" instance=ExtResource( 1 )]
+slides = [ ExtResource( 2 ) ]
+slideshow_title = "Keeping It Fresh"

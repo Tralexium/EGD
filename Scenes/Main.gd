@@ -3,35 +3,48 @@ extends Node
 export var game_start_delay := 1.5
 
 var music_is_faded := false
-var music_fade_time := 3.0
+var music_fade_time := 1.5
 
 onready var n_BG : ParallaxLayer = $ParallaxBackground/BG
 onready var n_BackHills : ParallaxLayer = $ParallaxBackground/BG
 onready var n_Hills : ParallaxLayer = $ParallaxBackground/BG
 onready var n_Floor : TileMap = $Floor
 onready var n_Player : KinematicBody2D = $Player
+onready var n_SlideshowWarps : Node2D = $SlideshowWarps
 onready var n_SlideshowLayer : CanvasLayer = $SlideshowLayer
 onready var n_Music : AudioStreamPlayer = $Music
 onready var n_Tween : Tween = $Tween
+onready var n_AnimationPlayer : AnimationPlayer = $AnimationPlayer
 
 
 func _ready() -> void:
-	n_Player.frozen = true
-	n_BG.visible = true
-	n_BG.modulate = Color.transparent
-	n_BackHills.visible = true
-	n_BackHills.modulate = Color.transparent
-	n_Hills.visible = true
-	n_Hills.modulate = Color.transparent
+#	n_Player.frozen = true
+#	n_Player.modulate = Color.transparent
+#	n_BG.visible = true
+#	n_BG.modulate = Color.transparent
+#	n_BackHills.visible = true
+#	n_BackHills.modulate = Color.transparent
+#	n_Hills.visible = true
+#	n_Hills.modulate = Color.transparent
 	
+	_connect_signals()
 	_do_intro()
+
+
+func _connect_signals() -> void:
+	if n_SlideshowWarps.get_child_count() == 0:
+		return
+	
+	for _warp in n_SlideshowWarps.get_children():
+		_warp.connect("player_entered_warp", self, "fade_out_music")
+		_warp.connect("player_exited_warp", self, "fade_in_music")
 
 
 func _do_intro() -> void:
 	yield(get_tree().create_timer(game_start_delay), "timeout")
 	
 	n_Music.play()
-	yield(get_tree().create_timer(5.0), "timeout")
+	
 
 
 func fade_in_music() -> void:

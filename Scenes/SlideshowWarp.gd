@@ -9,7 +9,7 @@ export(String, MULTILINE) var slideshow_name := "Slideshow Name" setget set_slid
 
 var is_ready := false
 var opening_slideshow := false
-var fade_dur := 0.7
+var fade_dur := 0.5
 var slideshow_instance : Control
 onready var n_Name: Label = $Name
 onready var n_Tween: Tween = $Tween
@@ -32,6 +32,9 @@ func set_slideshow_name(new_value: String) -> void:
 
 
 func _on_TitleVisibilityArea_body_entered(body: Node) -> void:
+	if opening_slideshow:
+		return
+	
 	if n_Tween.is_active():
 		n_Tween.stop_all()
 	n_Tween.interpolate_property(n_Name, "self_modulate", n_Name.self_modulate, ColorManager.light_color, fade_dur, Tween.TRANS_SINE, Tween.EASE_IN_OUT)
@@ -40,6 +43,9 @@ func _on_TitleVisibilityArea_body_entered(body: Node) -> void:
 
 
 func _on_TitleVisibilityArea_body_exited(body: Node) -> void:
+	if opening_slideshow:
+		return
+	
 	if n_Tween.is_active():
 		n_Tween.stop_all()
 	n_Tween.interpolate_property(n_Name, "self_modulate", n_Name.self_modulate, Color.transparent, fade_dur, Tween.TRANS_SINE, Tween.EASE_IN_OUT)
@@ -53,10 +59,9 @@ func _on_WarpArea_body_entered(body: Node) -> void:
 	opening_slideshow = true
 	emit_signal("player_entered_warp")
 	
-	if n_Tween.is_active():
-		n_Tween.stop_all()
-	
-	# Freeze the player and save the ground location
+	# Causes a bug with the yield for some reason...
+#	if n_Tween.is_active():
+#		n_Tween.stop_all()
 	
 	n_Tween.interpolate_property(n_Name, "self_modulate", n_Name.self_modulate, Color.transparent, fade_dur / 2, Tween.TRANS_SINE, Tween.EASE_IN_OUT)
 	n_Tween.interpolate_property(self, "scale", scale, Vector2(10, 10), fade_dur, Tween.TRANS_SINE, Tween.EASE_IN_OUT)
@@ -65,7 +70,7 @@ func _on_WarpArea_body_entered(body: Node) -> void:
 	
 	slideshow_instance = slideshow_scene.instance()
 	slideshow_instance.connect("slideshow_ended", self, "_on_Slideshow_ended")
-	get_tree().find_node("SlideshowLayer").add_child()
+	get_node("/root/Main/SlideshowLayer").add_child(slideshow_instance)
 
 
 func _on_Slideshow_ended() -> void:

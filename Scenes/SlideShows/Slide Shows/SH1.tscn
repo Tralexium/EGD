@@ -1,0 +1,9 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Scenes/SlideShows/SlideShow.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Scenes/SlideShows/Slides/Category 1/C1S2.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Scenes/SlideShows/Slides/Category 1/C1S1.tscn" type="PackedScene" id=3]
+
+[node name="SH1" instance=ExtResource( 1 )]
+slides = [ ExtResource( 3 ), ExtResource( 2 ) ]
+slideshow_title = "Introduction"

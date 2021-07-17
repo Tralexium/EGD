@@ -17,6 +17,7 @@ var current_slide_num := 0
 var n_Current_slide : Slide
 
 onready var n_Tween : Tween = $Tween
+onready var n_TweenOutro : Tween = $TweenOutro
 onready var n_ArrowTween : Tween = $ArrowTween
 onready var n_SlideArrowTween : Tween = $SlideArrowTween
 onready var n_Title : Label = $VBoxContainer/TitleBarBGColor/Title
@@ -33,7 +34,7 @@ onready var n_IntroFade : ColorRect = $IntroFade
 func _ready() -> void:
 	slide_count = slides.size()
 	n_Title.text = slideshow_title
-	get_tree().paused = true
+	get_node("/root/Main").pause_mode = PAUSE_MODE_STOP
 	_do_intro()
 
 
@@ -88,7 +89,6 @@ func _finish_intro() -> void:
 func _add_next_slide_to_tree() -> void:
 	if current_slide_num == slide_count:
 		_do_outro()
-		return
 	else:
 		# Next slide
 		n_Current_slide = slides[current_slide_num].instance()
@@ -100,11 +100,11 @@ func _add_next_slide_to_tree() -> void:
 
 
 func _do_outro() -> void:
-	n_Tween.interpolate_property(n_IntroFade, "rect_scale", Vector2(0, 1), Vector2(1, 1), intro_fade_dur, Tween.TRANS_SINE, Tween.EASE_IN)
-	n_Tween.start()
-	yield(n_Tween, "tween_all_completed")
+	n_TweenOutro.interpolate_property(n_IntroFade, "rect_scale", Vector2(0, 1), Vector2(1, 1), intro_fade_dur, Tween.TRANS_SINE, Tween.EASE_IN)
+	n_TweenOutro.start()
+	yield(n_TweenOutro, "tween_all_completed")
 	
-	get_tree().paused = false
+	get_node("/root/Main").pause_mode = PAUSE_MODE_INHERIT
 	yield(get_tree().create_timer(0.05), "timeout")
 	emit_signal("slideshow_ended")
 	queue_free()
